@@ -1,0 +1,54 @@
+/* Стилі для друкованої версії */
+@media print {
+    /* Приховуємо шапку та підвал */
+    header, footer {
+      display: none;
+    }
+  
+    /* Виводимо тільки контент */
+    body {
+      font-family: "Times New Roman", Georgia, Palatino, serif;
+      margin: 50px;
+    }
+  
+    /* Виведення повного URL замість гіперпосилань */
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  
+    a::after {
+      content: " (" attr(href) ")";
+    }
+  
+    /* Видалення всіх фонів та зображень */
+    * {
+      background: none !important;
+      color: black !important;
+    }
+  
+    /* Виведення заголовку сайту */
+    h1, h2 {
+      color: black;
+    }
+  
+    /* Встановлюємо поля для друку */
+    body {
+      margin: 50px;
+    }
+  
+    table {
+      width: 100%;
+      border: 1px solid black;
+    }
+  
+    td, th {
+      padding: 8px;
+      border: 1px solid black;
+    }
+  
+    th {
+      text-align: left;
+    }
+  }
+  
